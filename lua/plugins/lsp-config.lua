@@ -35,6 +35,7 @@ return {
         config = function()
 
             local lsp = require('lsp-zero').preset({})
+            vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
 
             local navic = require('nvim-navic')
 
@@ -50,7 +51,6 @@ return {
             lsp.ensure_installed({
                 'pyright',
                 'lua_ls',
-                'gopls',
                 'clangd',
                 'html',
                 'tsserver'
