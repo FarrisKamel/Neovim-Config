@@ -1,6 +1,6 @@
 return{
     "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
+    version = "*",
     dependencies = {
         "nvim-lua/plenary.nvim",
         "nvim-tree/nvim-web-devicons", 
@@ -8,10 +8,11 @@ return{
         -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     },
     -- Neo Tree KeyMap
-    vim.keymap.set('n', '<leader>n', ':Neotree filesystem reveal left<CR>', {}),
+    vim.keymap.set('n', '<leader>n', ':Neotree filesystem reveal float<CR>', {}),
 
     config = function() 
         require("neo-tree").setup({
+            window = { position = "right" },
             event_handlers = {
 
                 {

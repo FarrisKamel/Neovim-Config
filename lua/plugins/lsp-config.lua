@@ -53,7 +53,8 @@ return {
                 'lua_ls',
                 'clangd',
                 'html',
-                'tsserver'
+                'tsserver',
+                'clangd'
             })
 
             lsp.setup()
